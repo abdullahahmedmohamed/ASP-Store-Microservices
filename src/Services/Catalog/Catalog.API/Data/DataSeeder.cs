@@ -6,9 +6,9 @@ namespace Catalog.API.Data;
 
 public class DataSeeder
 {
-    public static void Seed(IHost app)
+    public static void Seed(ICatalogContext context)
     {
-        var context = app.Services.GetRequiredService<ICatalogContext>();
+        //var context = app.Services.GetRequiredService<ICatalogContext>();
         SeedProducts(context);
     }
 

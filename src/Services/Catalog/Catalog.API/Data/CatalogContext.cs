@@ -18,6 +18,8 @@ public class CatalogContext : ICatalogContext
         
         Products =mongoDatabase.GetCollection<Product>(
             databaseSettings.Value.ProductsCollectionName);
+
+        DataSeeder.Seed(this);
     }
     
     public IMongoCollection<Product> Products { get; } 
